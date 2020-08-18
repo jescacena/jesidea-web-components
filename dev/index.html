@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>&lt;my-element> Demo</title>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../lib/my-element.js"></script>
+    <script type="module" src="../lib/jwc-user-profile/jwc-user-profile.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -13,8 +14,11 @@
     </style>
   </head>
   <body>
-    <my-element name="jander">
+    <!-- <my-element name="jander">
       <p>This is child content</p>
-    </my-element>
+    </my-element> -->
+    
+    <jwc-user-profile></jwc-user-profile>
+
   </body>
 </html>
