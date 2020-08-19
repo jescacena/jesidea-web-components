@@ -1,6 +1,6 @@
 {
   "name": "jesidea-wc",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Jesidea Web Components",
   "main": "lib/index.bundled.js",
   "module": "lib/index.bundled.js",
