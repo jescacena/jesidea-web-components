@@ -18,9 +18,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 
 export default {
-  input: './lib/index.js',
+  input: './dist/index.js',
   output: {
-    file: './lib/index.bundled.js',
+    file: './dist/index.bundled.js',
     format: 'esm',
   },
   onwarn(warning) {

@@ -8,9 +8,10 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc",
+    "prebuild:pro": "cp -R ./src/assets ./dist",
     "build:pro": "rollup -c",
     "build:watch": "tsc --watch",
-    "clean": "rimraf lib ./lib/index.bundled.js",
+    "clean": "rimraf lib ./dist/index.bundled.js",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:lit-analyzer": "lit-analyzer",
