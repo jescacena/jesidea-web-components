@@ -1,15 +1,15 @@
-import {MyElement} from '../my-element.js';
-import {fixture, html} from '@open-wc/testing';
+import { MyElement } from "../my-element.js";
+import { fixture, html } from "@open-wc/testing";
 
 const assert = chai.assert;
 
-suite('my-element', () => {
-  test('is defined', () => {
-    const el = document.createElement('my-element');
+suite("my-element", () => {
+  test("is defined", () => {
+    const el = document.createElement("my-element");
     assert.instanceOf(el, MyElement);
   });
 
-  test('renders with default values', async () => {
+  test("renders with default values", async () => {
     const el = await fixture(html`<my-element></my-element>`);
     assert.shadowDom.equal(
       el,
@@ -21,7 +21,7 @@ suite('my-element', () => {
     );
   });
 
-  test('renders with a set name', async () => {
+  test("renders with a set name", async () => {
     const el = await fixture(html`<my-element name="Test"></my-element>`);
     assert.shadowDom.equal(
       el,
@@ -33,9 +33,9 @@ suite('my-element', () => {
     );
   });
 
-  test('handles a click', async () => {
+  test("handles a click", async () => {
     const el = (await fixture(html`<my-element></my-element>`)) as MyElement;
-    const button = el.shadowRoot!.querySelector('button')!;
+    const button = el.shadowRoot!.querySelector("button")!;
     button.click();
     await el.updateComplete;
     assert.shadowDom.equal(

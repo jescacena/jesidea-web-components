@@ -12,7 +12,7 @@
  * http://polymer.github.io/PATENTS.txt
  */
 
-import {LitElement, html, customElement, property, css} from 'lit-element';
+import { LitElement, html, customElement, property, css } from "lit-element";
 
 /**
  * An example element.
@@ -20,7 +20,7 @@ import {LitElement, html, customElement, property, css} from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-element')
+@customElement("my-element")
 export class MyElement extends LitElement {
   static styles = css`
     :host {
@@ -35,12 +35,12 @@ export class MyElement extends LitElement {
    * The name to say "Hello" to.
    */
   @property()
-  name = 'World';
+  name = "World";
 
   /**
    * The number of times the button has been clicked.
    */
-  @property({type: Number})
+  @property({ type: Number })
   count = 0;
 
   render() {
@@ -58,12 +58,12 @@ export class MyElement extends LitElement {
   }
 
   foo(): string {
-    return 'foo';
+    return "foo";
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-element': MyElement;
+    "my-element": MyElement;
   }
 }

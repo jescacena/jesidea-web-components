@@ -1,12 +1,7 @@
 ---
-layout: index.11ty.cjs
-title: <jesidea-wc> ⌲ Home
+layout: page.11ty.cjs
+title: <my-element> ⌲ Home
 ---
-
-# Guides
-
-* [<my-element>](./my-element-index)
-
 
 # &lt;my-element>
 

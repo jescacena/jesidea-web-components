@@ -1,4 +1,4 @@
 export type JwcQuote = {
-    author: string | null,
-    quote: string
+  author: string | null;
+  quote: string;
 };

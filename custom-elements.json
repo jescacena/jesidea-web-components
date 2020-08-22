@@ -47,6 +47,102 @@
           "description": "The button"
         }
       ]
+    },
+    {
+      "name": "jwc-project-card",
+      "path": "./src/jwc-project-card/jwc-project-card.ts",
+      "description": "Project card",
+      "attributes": [
+        {
+          "name": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "type": "JwcProjectData",
+          "default": "{\"name\":\"Codersnack\",\"description\":\"Learn and review your programming skills with snacks\",\"website\":\"http://codersnack.com\",\"repo\":null,\"download\":\"https://play.google.com/store/apps/details?id=com.jes.codesnack_app\"}"
+        }
+      ],
+      "properties": [
+        {
+          "name": "image",
+          "attribute": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "attribute": "data",
+          "type": "JwcProjectData",
+          "default": "{\"name\":\"Codersnack\",\"description\":\"Learn and review your programming skills with snacks\",\"website\":\"http://codersnack.com\",\"repo\":null,\"download\":\"https://play.google.com/store/apps/details?id=com.jes.codesnack_app\"}"
+        }
+      ]
+    },
+    {
+      "name": "jwc-quote-random-box",
+      "path": "./src/jwc-quote-random-box/jwc-quote-random-box.ts",
+      "description": "User profile element",
+      "attributes": [
+        {
+          "name": "icon",
+          "type": "string | null"
+        },
+        {
+          "name": "header",
+          "type": "string | null"
+        },
+        {
+          "name": "source",
+          "type": "JwcQuote[]",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "string | null"
+        },
+        {
+          "name": "header",
+          "attribute": "header",
+          "type": "string | null"
+        },
+        {
+          "name": "source",
+          "attribute": "source",
+          "type": "JwcQuote[]",
+          "default": "[]"
+        }
+      ]
+    },
+    {
+      "name": "jwc-user-profile",
+      "path": "./src/jwc-user-profile/jwc-user-profile.ts",
+      "description": "User profile element",
+      "attributes": [
+        {
+          "name": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "type": "JwcProfileData",
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+        }
+      ],
+      "properties": [
+        {
+          "name": "image",
+          "attribute": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "attribute": "data",
+          "type": "JwcProfileData",
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+        }
+      ]
     }
   ]
 }

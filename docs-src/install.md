@@ -1,16 +1,20 @@
 ---
 layout: page.11ty.cjs
-title: <my-element> ⌲ Install
+title: JESIDEA Web Components Documentation
 ---
 
-# Install
+# Introduction
 
-`<my-element>` is distributed on npm, so you can install it locally or use it via npm CDNs like unpkg.com.
+JESIDEA web components are created to be consumed mainly in JESIDEA web apps, but with motivation for spread its use all over the world.
+`jesidea-wc` is distributed on npm, so you can install it locally or use it via npm CDNs like unpkg.com.
+
+# Guide
+* [my-elements](./my-element-index)
 
 ## Local Installation
 
 ```bash
-npm i my-element
+npm i jesidea-wc
 ```
 
 ## CDN
@@ -21,10 +25,10 @@ For this element to work from unpkg.com specifically, you need to include the `?
 
 ### HTML
 ```html
-<script type="module" src="https://unpkg.com/my-element?module"></script>
+<script type="module" src="https://unpkg.com/jesidea-wc?module"></script>
 ```
 
 ### JavaScript
 ```html
-import {MyElement} from 'https://unpkg.com/my-element?module';
+import {JwcProjectCard} from 'https://unpkg.com/jesidea-wc?module';
 ```
