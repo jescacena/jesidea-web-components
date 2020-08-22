@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { LitElement, html, customElement, property, css } from 'lit-element';
+import { LitElement, html, customElement, property, css } from "lit-element";
 /**
  * User profile element
  */
@@ -20,9 +20,7 @@ let JwcQuoteRandomBox = class JwcQuoteRandomBox extends LitElement {
         this.source = [];
     }
     render() {
-        return html `
-        <div>JESidea jwc-quote-random-box</div>
-    `;
+        return html ` <div>JESidea jwc-quote-random-box</div> `;
     }
 };
 JwcQuoteRandomBox.styles = css `
@@ -43,7 +41,7 @@ __decorate([
     property()
 ], JwcQuoteRandomBox.prototype, "source", void 0);
 JwcQuoteRandomBox = __decorate([
-    customElement('jwc-quote-random-box')
+    customElement("jwc-quote-random-box")
 ], JwcQuoteRandomBox);
 export { JwcQuoteRandomBox };
 //# sourceMappingURL=jwc-quote-random-box.js.map

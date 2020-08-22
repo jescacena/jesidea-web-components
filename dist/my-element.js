@@ -17,7 +17,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { LitElement, html, customElement, property, css } from 'lit-element';
+import { LitElement, html, customElement, property, css } from "lit-element";
 /**
  * An example element.
  *
@@ -30,7 +30,7 @@ let MyElement = class MyElement extends LitElement {
         /**
          * The name to say "Hello" to.
          */
-        this.name = 'World';
+        this.name = "World";
         /**
          * The number of times the button has been clicked.
          */
@@ -49,7 +49,7 @@ let MyElement = class MyElement extends LitElement {
         this.count++;
     }
     foo() {
-        return 'foo';
+        return "foo";
     }
 };
 MyElement.styles = css `
@@ -67,7 +67,7 @@ __decorate([
     property({ type: Number })
 ], MyElement.prototype, "count", void 0);
 MyElement = __decorate([
-    customElement('my-element')
+    customElement("my-element")
 ], MyElement);
 export { MyElement };
 //# sourceMappingURL=my-element.js.map

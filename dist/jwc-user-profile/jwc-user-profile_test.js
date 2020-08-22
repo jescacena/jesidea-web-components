@@ -1,9 +1,9 @@
-import { JwcUserProfile } from './jwc-user-profile.js';
+import { JwcUserProfile } from "./jwc-user-profile.js";
 // import {fixture, html} from '@open-wc/testing';
 const assert = chai.assert;
-suite('jwc-user-profile', () => {
-    test('is defined', () => {
-        const el = document.createElement('jwc-user-profile');
+suite("jwc-user-profile", () => {
+    test("is defined", () => {
+        const el = document.createElement("jwc-user-profile");
         assert.instanceOf(el, JwcUserProfile);
     });
     // test('renders with default values', async () => {

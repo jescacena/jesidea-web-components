@@ -2,7 +2,7 @@
  * @license
  * Copyright (c) 2020 Jesidea Authors. All rights reserved.
  */
-import { LitElement } from 'lit-element';
+import { LitElement } from "lit-element";
 import { JwcProfileData } from "./jwc-profile-data.type";
 /**
  * User profile element
@@ -15,7 +15,7 @@ export declare class JwcUserProfile extends LitElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'jwc-user-profile': JwcUserProfile;
+        "jwc-user-profile": JwcUserProfile;
     }
 }
 //# sourceMappingURL=jwc-user-profile.d.ts.map

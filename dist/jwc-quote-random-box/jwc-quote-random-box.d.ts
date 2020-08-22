@@ -2,7 +2,7 @@
  * @license
  * Copyright (c) 2020 Jesidea Authors. All rights reserved.
  */
-import { LitElement } from 'lit-element';
+import { LitElement } from "lit-element";
 import { JwcQuote } from "./jwc-quote.type";
 /**
  * User profile element
@@ -16,7 +16,7 @@ export declare class JwcQuoteRandomBox extends LitElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'jwc-quote-random-box': JwcQuoteRandomBox;
+        "jwc-quote-random-box": JwcQuoteRandomBox;
     }
 }
 //# sourceMappingURL=jwc-quote-random-box.d.ts.map

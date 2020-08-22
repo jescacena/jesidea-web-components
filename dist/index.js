@@ -1,2 +1,2 @@
-export { MyElement } from './my-element';
+export { MyElement } from "./my-element";
 //# sourceMappingURL=index.js.map
