@@ -102,6 +102,35 @@
       ]
     },
     {
+      "name": "jwc-user-profile",
+      "path": "./src/jwc-user-profile/jwc-user-profile.ts",
+      "description": "User profile element",
+      "attributes": [
+        {
+          "name": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "type": "JwcProfileData",
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+        }
+      ],
+      "properties": [
+        {
+          "name": "image",
+          "attribute": "image",
+          "type": "string | null"
+        },
+        {
+          "name": "data",
+          "attribute": "data",
+          "type": "JwcProfileData",
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+        }
+      ]
+    },
+    {
       "name": "jwc-quote-random-box",
       "path": "./src/jwc-quote-random-box/jwc-quote-random-box.ts",
       "description": "User profile element",
@@ -136,35 +165,6 @@
           "attribute": "source",
           "type": "JwcQuote[]",
           "default": "[]"
-        }
-      ]
-    },
-    {
-      "name": "jwc-user-profile",
-      "path": "./src/jwc-user-profile/jwc-user-profile.ts",
-      "description": "User profile element",
-      "attributes": [
-        {
-          "name": "image",
-          "type": "string | null"
-        },
-        {
-          "name": "data",
-          "type": "JwcProfileData",
-          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
-        }
-      ],
-      "properties": [
-        {
-          "name": "image",
-          "attribute": "image",
-          "type": "string | null"
-        },
-        {
-          "name": "data",
-          "attribute": "data",
-          "type": "JwcProfileData",
-          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
         }
       ]
     }
