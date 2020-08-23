@@ -1,9 +1,9 @@
 {
   "name": "jesidea-wc",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Jesidea Web Components",
-  "main": "lib/index.bundled.js",
-  "module": "lib/index.bundled.js",
+  "main": "dist/index.bundled.js",
+  "module": "dist/index.bundled.js",
   "type": "module",
   "scripts": {
     "prebuild": "npm run clean",
@@ -21,7 +21,7 @@
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/jesidea-wc.bundled.js",
+    "docs:build": "rollup -c --file docs/index.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
@@ -30,7 +30,7 @@
     "test:watch": "karma start karma.conf.cjs --auto-watch=true --single-run=false",
     "test:update-snapshots": "karma start karma.conf.cjs --update-snapshots",
     "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots",
-    "checksize": "rollup -c ; cat jesidea-wc.bundled.js | gzip -9 | wc -c ; rm jesidea-wc.bundled.js"
+    "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js"
   },
   "keywords": [
     "web-components",

@@ -49,44 +49,6 @@
       ]
     },
     {
-      "name": "jwc-quote-random-box",
-      "path": "./src/jwc-quote-random-box/jwc-quote-random-box.ts",
-      "description": "User profile element",
-      "attributes": [
-        {
-          "name": "icon",
-          "type": "string | null"
-        },
-        {
-          "name": "header",
-          "type": "string | null"
-        },
-        {
-          "name": "source",
-          "type": "JwcQuote[]",
-          "default": "[]"
-        }
-      ],
-      "properties": [
-        {
-          "name": "icon",
-          "attribute": "icon",
-          "type": "string | null"
-        },
-        {
-          "name": "header",
-          "attribute": "header",
-          "type": "string | null"
-        },
-        {
-          "name": "source",
-          "attribute": "source",
-          "type": "JwcQuote[]",
-          "default": "[]"
-        }
-      ]
-    },
-    {
       "name": "jwc-project-card",
       "path": "./src/jwc-project-card/jwc-project-card.ts",
       "description": "Project card",
@@ -136,6 +98,44 @@
           "attribute": "data",
           "type": "JwcProjectData",
           "default": "{\"name\":\"-Empty name-\",\"description\":\"-Empty description-\",\"website\":\"-Empty website url-\",\"repo\":null,\"download\":null}"
+        }
+      ]
+    },
+    {
+      "name": "jwc-quote-random-box",
+      "path": "./src/jwc-quote-random-box/jwc-quote-random-box.ts",
+      "description": "User profile element",
+      "attributes": [
+        {
+          "name": "icon",
+          "type": "string | null"
+        },
+        {
+          "name": "header",
+          "type": "string | null"
+        },
+        {
+          "name": "source",
+          "type": "JwcQuote[]",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "string | null"
+        },
+        {
+          "name": "header",
+          "attribute": "header",
+          "type": "string | null"
+        },
+        {
+          "name": "source",
+          "attribute": "source",
+          "type": "JwcQuote[]",
+          "default": "[]"
         }
       ]
     },

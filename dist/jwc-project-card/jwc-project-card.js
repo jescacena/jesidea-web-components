@@ -9,26 +9,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { LitElement, customElement, property, html } from "lit-element";
-import 'lit-media-query/lit-media-query.js';
-import { classMap } from 'lit-html/directives/class-map';
-import { styles, fallbackImageBase64Encoded } from './jwc-project-card.styles';
+import "lit-media-query/lit-media-query.js";
+import { classMap } from "lit-html/directives/class-map";
+import { styles, fallbackImageBase64Encoded } from "./jwc-project-card.styles";
 /**
  * Project card
  */
 let JwcProjectCard = class JwcProjectCard extends LitElement {
     constructor() {
         super(...arguments);
-        this._query = '(max-width: 800px)';
+        this._query = "(max-width: 800px)";
         this._isMobile = window.visualViewport.width < 800;
         this.image = fallbackImageBase64Encoded;
         this.containerClasses = { container: true, mobile: false };
-        this.headerClasses = { header: true, 'header-mobile': false };
+        this.headerClasses = { header: true, "header-mobile": false };
         this.data = {
             name: "-Empty name-",
             description: "-Empty description-",
             website: "-Empty website url-",
             repo: null,
-            download: null
+            download: null,
         };
     }
     connectedCallback() {
@@ -37,34 +37,51 @@ let JwcProjectCard = class JwcProjectCard extends LitElement {
     }
     _handleMediaQuery(event) {
         this._isMobile = event.detail.value;
-        this.containerClasses = { container: true, mobile: this._isMobile.valueOf() };
-        this.headerClasses = { header: true, 'header-mobile': this._isMobile.valueOf() };
+        this.containerClasses = {
+            container: true,
+            mobile: this._isMobile.valueOf(),
+        };
+        this.headerClasses = {
+            header: true,
+            "header-mobile": this._isMobile.valueOf(),
+        };
         // console.log('JES _handleMediaQuery', this._isMobile, this.containerClasses);
     }
     render() {
-        this.containerClasses = { container: true, mobile: this._isMobile.valueOf() };
-        this.headerClasses = { header: true, 'header-mobile': this._isMobile.valueOf() };
+        this.containerClasses = {
+            container: true,
+            mobile: this._isMobile.valueOf(),
+        };
+        this.headerClasses = {
+            header: true,
+            "header-mobile": this._isMobile.valueOf(),
+        };
         // console.log('JES render!!',this.containerClasses);
         // console.log('JES jwc-project-card data prop-->', this.data);
-        var downloadIcon = (this.data.download) ? html `
-      <li class="download">
-        <a href="${this.data.download}" target="_blank"></a>
-      </li>
-      ` : '';
-        var repoIcon = (this.data.repo) ? html `
-      <li class="repository">
-        <a href="${this.data.repo}" target="_blank"></a>
-      </li>
-      ` : '';
+        var downloadIcon = this.data.download
+            ? html `
+          <li class="download">
+            <a href="${this.data.download}" target="_blank"></a>
+          </li>
+        `
+            : "";
+        var repoIcon = this.data.repo
+            ? html `
+          <li class="repository">
+            <a href="${this.data.repo}" target="_blank"></a>
+          </li>
+        `
+            : "";
         return html `
       <lit-media-query
         .query="${this._query}"
-        @changed="${this._handleMediaQuery}">
+        @changed="${this._handleMediaQuery}"
+      >
       </lit-media-query>
       <div class=${classMap(this.containerClasses)}>
         <div class=${classMap(this.headerClasses)}>
           <h2>${this.data.name}</h2>
-          <img src="${this.image}">
+          <img src="${this.image}" />
         </div>
         <div class="right-list">
           <p>${this.data.description}</p>
@@ -72,8 +89,7 @@ let JwcProjectCard = class JwcProjectCard extends LitElement {
             <li class="website">
               <a href="${this.data.website}" target="_blank"></a>
             </li>
-            ${downloadIcon}
-            ${repoIcon}
+            ${downloadIcon} ${repoIcon}
           </ul>
         </div>
       </div>

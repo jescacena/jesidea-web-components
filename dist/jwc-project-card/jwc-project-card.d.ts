@@ -4,8 +4,8 @@
  */
 import { LitElement } from "lit-element";
 import { JwcProjectData } from "./jwc-project-data.type";
-import 'lit-media-query/lit-media-query.js';
-import { ClassInfo } from 'lit-html/directives/class-map';
+import "lit-media-query/lit-media-query.js";
+import { ClassInfo } from "lit-html/directives/class-map";
 /**
  * Project card
  */
