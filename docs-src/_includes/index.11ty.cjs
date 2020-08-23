@@ -16,8 +16,8 @@ module.exports = function(data) {
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
     <link href="${relative(page.url, '/prism-okaidia.css')}" rel="stylesheet" />
-    <script type="module" src="${relative(page.url, '/jesidea-wc.bundled.js')}"></script>
-  </head>
+    <script type="module" src='https://unpkg.com/jesidea-wc/dist/jesidea-wc.bundled.js'></script>
+    </head>
   <body>
     ${header()}
     <div id="main-wrapper">
@@ -26,6 +26,7 @@ module.exports = function(data) {
       <center><a href="${relative(page.url, '/api/')}">API reference</a></center>
       <ul>
         <li><a href="${relative(page.url, '/my-element/')}">my-element</a></li>
+        <li><a href="${relative(page.url, '/jwc-project-card/')}">jwc-project-card</a></li>
         <li><a href="${relative(page.url, '/jwc-user-profile/')}">jwc-user-profile</a></li>
       </ul>
       </main>

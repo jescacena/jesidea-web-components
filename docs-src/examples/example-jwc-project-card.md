@@ -1,20 +1,18 @@
 ---
 layout: example.11ty.cjs
-title:  Examples
+title: <jwc-project-card> ⌲ Examples ⌲ Basic
 tags: example
 name: Basic
-description: Examples catalog
+description: jwc-project-card ⌲ A basic example
 ---
 
 <style>
-  my-element p {
+  jwc-project-card {
     border: solid 1px blue;
     padding: 8px;
   }
 </style>
-<my-element>
-  <p>This is child content</p>
-</my-element>
+<jwc-project-card></jwc-project-card>
 
 <h3>CSS</h3>
 
@@ -28,7 +26,5 @@ description: Examples catalog
 <h3>HTML</h3>
 
 ```html
-<my-element>
-  <p>This is child content</p>
-</my-element>
+<jwc-project-card></jwc-project-card>
 ```

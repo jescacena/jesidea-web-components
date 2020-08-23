@@ -1,12 +1,17 @@
 :root {
+
   --red-color: #ff5722;
   --lightblue-color: #bcdee7;
+  --dirty-white: #fbfaf8;
+
   --theme-primary-color: var(--red-color);
   --theme-secondary-color: #536390;
-  --theme-font-color: #424242;
+  --theme-font-color: #57605b;
   --theme-bg-color: #fff;
+  --theme-bg-color-secondary: var(--dirty-white);
+  --theme-bg-color-third: var(--lightblue-color);
   --theme-heading-color: #292922;
-  --theme-font-family-typewriter: "Special Elite", cursive;
+  --theme-font-family: "Special Elite", cursive;
 }
 
 [data-theme="dark"] {

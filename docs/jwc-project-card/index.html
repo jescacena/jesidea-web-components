@@ -1,0 +1,73 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><jwc-project-card></title>
+    <link rel="stylesheet" href="../docs.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
+    <link href="../prism-okaidia.css" rel="stylesheet" />
+    <script type="module" src='https://unpkg.com/jesidea-wc/dist/jesidea-wc.bundled.js'></script>
+    </head>
+  <body>
+    
+<header>
+  <h1>&lt;jesidea-wc> Documentation</h1>
+  <h2>Web component Library for Jesidea Web Apps</h2>
+</header>
+    
+<nav>
+  <a href="../">Home</a>
+  <a href="../examples/">Examples</a>
+  <a href="../api/">API</a>
+  <a href="../install/">Install</a>
+</nav>
+    <div id="main-wrapper">
+      <main>
+        <h1>&lt;jwc-project-card&gt;</h1>
+<p><code>&lt;jwc-project-card&gt;</code> wraps in a nice card box all related content for a personal project: including repositories, website and download urls (mobile apps)</p>
+<h2>As easy as HTML</h2>
+<section class="columns">
+  <div>
+<p><code>&lt;jwc-project-card&gt;</code> is just an HTML element. You can it anywhere you can use HTML!</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jwc-project-card</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jwc-project-card</span><span class="token punctuation">></span></span></code></pre>
+  </div>
+  <div>
+<p><jwc-project-card></jwc-project-card></p>
+  </div>
+</section>
+<h2>Configure with attributes</h2>
+<section class="columns">
+  <div>
+<p><code>&lt;jwc-project-card&gt;</code> can be configured with attributed in plain HTML.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jwc-project-card</span> <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.bioecoactual.com/wp-content/uploads/2016/09/gandhi.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jwc-project-card</span><span class="token punctuation">></span></span></code></pre>
+  </div>
+  <div>
+<p><jwc-project-card name="https://www.bioecoactual.com/wp-content/uploads/2016/09/gandhi.jpg"></jwc-project-card></p>
+  </div>
+</section>
+<h2>Declarative rendering</h2>
+<section class="columns">
+  <div>
+<p><code>&lt;jwc-project-card&gt;</code> can be used with declarative rendering libraries like Angular, React, Vue, and lit-html</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>html<span class="token punctuation">,</span> render<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lit-html'</span><span class="token punctuation">;</span><br><br><span class="token keyword">const</span> name<span class="token operator">=</span><span class="token string">"lit-html"</span><span class="token punctuation">;</span><br><br><span class="token function">render</span><span class="token punctuation">(</span>html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"><br>  &lt;h2>This is a &amp;lt;jwc-project-card&amp;gt;&lt;/h2><br>  &lt;jwc-project-card image=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>image<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">>&lt;/jwc-project-card><br></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  </div>
+  <div>
+<h2>This is a &lt;jwc-project-card&gt;</h2>
+<jwc-project-card name="lit-html"></jwc-project-card>
+  </div>
+</section>
+
+      </main>
+    </div>
+    
+<footer>
+  <p>
+    Made with
+    <a href="https://github.com/PolymerLabs/lit-element-starter-ts">lit-element-starter-ts</a>
+  </p>
+</footer>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "jesidea-wc",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Jesidea Web Components",
   "main": "lib/index.bundled.js",
   "module": "lib/index.bundled.js",
@@ -10,6 +10,7 @@
     "build": "tsc",
     "prebuild:pro": "cp -R ./src/assets ./dist",
     "build:pro": "rollup -c",
+    "prebuild:watch": "cp -R ./src/assets ./dist",
     "build:watch": "tsc --watch",
     "clean": "rimraf lib ./dist/index.bundled.js",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
@@ -43,7 +44,8 @@
   "author": "Javier Escacena",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "lit-element": "^2.3.1"
+    "lit-element": "^2.3.1",
+    "lit-media-query": "^1.0.7"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",

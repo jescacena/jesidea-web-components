@@ -1,24 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>JWC Demo</title>
-    <script type="module" src="../dist/my-element.js"></script>
-    <script type="module" src="../dist/jwc-user-profile/jwc-user-profile.js"></script>
-    <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- <my-element name="jander">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JWC Demo</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../dist/assets/jwc-base.css">
+
+        <script type="module" src="../dist/my-element.js"></script>
+        <script
+            type="module"
+            src="../dist/jwc-user-profile/jwc-user-profile.js"
+        ></script>
+        <script
+            type="module"
+            src="../dist/jwc-project-card/jwc-project-card.js"
+        ></script>
+        <style>
+            p {
+                border: solid 1px blue;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <my-element name="jander">
       <p>This is child content</p>
     </my-element> -->
-    
-    <jwc-user-profile></jwc-user-profile>
 
-  </body>
+        <h2>jwc-project-card</h2>
+        <jwc-project-card
+        ></jwc-project-card>
+
+        <script>
+            var jwcProjectCard = document.querySelector("jwc-project-card");
+            jwcProjectCard.image = "http://jesidea.com/home/img/codersnack_icon_hi_res.png";
+            jwcProjectCard.data = {
+                name: "Codersnack",
+                description: "Learn and review your programming skills with snacks",
+                website: "http://jesidea.com",
+                repo: "http://jander.com",
+                download: "http://playstore.com",
+            };
+        </script>
+    </body>
 </html>

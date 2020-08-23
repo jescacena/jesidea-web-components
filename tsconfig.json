@@ -24,6 +24,6 @@
             }
         ]
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "src/test/my-element_test.ts"],
     "exclude": []
 }

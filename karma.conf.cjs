@@ -10,7 +10,8 @@ module.exports = (config) => {
       },
       files: [
         {
-          pattern: config.grep ? config.grep : 'dist/**/*_test.js',
+          pattern: config.grep ? config.grep : 'dist/jwc-project-card/*_test.js',
+          // pattern: config.grep ? config.grep : 'dist/**/*_test.js',
           type: 'module',
         },
       ],
