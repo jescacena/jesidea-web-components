@@ -12,8 +12,12 @@ description: jwc-project-card ⌲ A basic example
     padding: 8px;
   }
 </style>
+
 <jwc-project-card></jwc-project-card>
 
+<my-element>
+  <p>This is child content</p>
+</my-element>
 <h3>CSS</h3>
 
 ```css
