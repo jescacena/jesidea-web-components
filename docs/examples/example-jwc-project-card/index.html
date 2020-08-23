@@ -37,7 +37,7 @@
                   </li>
                 
                   <li class=selected>
-                    <a href="">jwc-project-card ⌲ A basic example</a>
+                    <a href="">jwc-project-card ⌲ Examples</a>
                   </li>
                 
                   <li class=>
@@ -48,19 +48,23 @@
       </nav>
       <div>
         <style>
-  jwc-project-card {
-    border: solid 1px blue;
-    padding: 8px;
-  }
 </style>
 <p><jwc-project-card></jwc-project-card></p>
-<my-element>
-  <p>This is child content</p>
-</my-element>
-<h3>CSS</h3>
-<pre class="language-css"><code class="language-css">  <span class="token selector">p</span> <span class="token punctuation">{</span><br>    <span class="token property">border</span><span class="token punctuation">:</span> solid 1px blue<span class="token punctuation">;</span><br>    <span class="token property">padding</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span></code></pre>
 <h3>HTML</h3>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jwc-project-card</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jwc-project-card</span><span class="token punctuation">></span></span></code></pre>
+<p><jwc-project-card class="example-2" image="https://apprecs.org/gp/images/app-icons/300/76/net.cubo2.afistro.jpg" data="{name: 'Jander Clander'}"></jwc-project-card></p>
+<script>
+  var sample2Element = document.querySelector('.example-2');
+  sample2Element.data = {
+                name: "Codersnack",
+                description: "Learn and review your programming skills with snacks",
+                website: "http://jesidea.com",
+                repo: "http://jander.com",
+                download: "http://playstore.com",
+            };
+</script>
+<h3>HTML</h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jwc-project-card</span> <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://apprecs.org/gp/images/app-icons/300/76/net.cubo2.afistro.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jwc-project-card</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><br>  <span class="token keyword">var</span> sample2Element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.example-2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  sample2Element<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><br>                name<span class="token operator">:</span> <span class="token string">"Codersnack"</span><span class="token punctuation">,</span><br>                description<span class="token operator">:</span> <span class="token string">"Learn and review your programming skills with snacks"</span><span class="token punctuation">,</span><br>                website<span class="token operator">:</span> <span class="token string">"http://jesidea.com"</span><span class="token punctuation">,</span><br>                repo<span class="token operator">:</span> <span class="token string">"http://jander.com"</span><span class="token punctuation">,</span><br>                download<span class="token operator">:</span> <span class="token string">"http://playstore.com"</span><span class="token punctuation">,</span><br>            <span class="token punctuation">}</span><span class="token punctuation">;</span><br></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 
       </div>
     </section>

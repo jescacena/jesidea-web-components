@@ -3,32 +3,45 @@ layout: example.11ty.cjs
 title: <jwc-project-card> ⌲ Examples ⌲ Basic
 tags: example
 name: Basic
-description: jwc-project-card ⌲ A basic example
+description: jwc-project-card ⌲ Examples
 ---
 
 <style>
-  jwc-project-card {
-    border: solid 1px blue;
-    padding: 8px;
-  }
 </style>
 
 <jwc-project-card></jwc-project-card>
-
-<my-element>
-  <p>This is child content</p>
-</my-element>
-<h3>CSS</h3>
-
-```css
-  p {
-    border: solid 1px blue;
-    padding: 8px;
-  }
-```
 
 <h3>HTML</h3>
 
 ```html
 <jwc-project-card></jwc-project-card>
+```
+
+<jwc-project-card class="example-2" image="https://apprecs.org/gp/images/app-icons/300/76/net.cubo2.afistro.jpg" data="{name: 'Jander Clander'}"></jwc-project-card>
+
+<script>
+  var sample2Element = document.querySelector('.example-2');
+  sample2Element.data = {
+                name: "Codersnack",
+                description: "Learn and review your programming skills with snacks",
+                website: "http://jesidea.com",
+                repo: "http://jander.com",
+                download: "http://playstore.com",
+            };
+</script>
+
+<h3>HTML</h3>
+
+```html
+<jwc-project-card image="https://apprecs.org/gp/images/app-icons/300/76/net.cubo2.afistro.jpg"></jwc-project-card>
+<script>
+  var sample2Element = document.querySelector('.example-2');
+  sample2Element.data = {
+                name: "Codersnack",
+                description: "Learn and review your programming skills with snacks",
+                website: "http://jesidea.com",
+                repo: "http://jander.com",
+                download: "http://playstore.com",
+            };
+</script>
 ```
