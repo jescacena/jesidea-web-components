@@ -1,6 +1,6 @@
 {
   "name": "jesidea-wc",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Jesidea Web Components",
   "main": "dist/index.bundled.js",
   "module": "dist/index.bundled.js",
@@ -10,6 +10,7 @@
     "build": "tsc",
     "prebuild:pro": "cp -R ./src/assets ./dist",
     "build:pro": "rollup -c",
+    "build:pro-local-jesidea-landing": "npm run clean; npm run build; npm run build:pro ; cp ./dist/index.bundled.js ../jesidea-landing-page/js/jesidea-wc",
     "prebuild:watch": "cp -R ./src/assets ./dist",
     "build:watch": "tsc --watch",
     "clean": "rimraf lib ./dist/index.bundled.js",

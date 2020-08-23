@@ -222,13 +222,14 @@ class st{constructor(t){this.classes=new Set,this.changed=!1,this.element=t;cons
     flex-direction: row;
     justify-content: space-between;
     border: solid 1px gray;
-    max-width: 400px;
+    max-width: 500px;
     font-family: var(--theme-font-family);
     color: var(--theme-font-color, #000)
   }
 
   .header {
     display: flex;
+    flex: 0 0 200px;
     flex-direction: column;
     border-right: 1.5px dashed;
     border-color: #cacaca;
