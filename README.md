@@ -1,6 +1,29 @@
 # Jesidea Web Components
 Web components repository for Jesidea web apps
 
+## Install
+
+Node v12.X
+```
+npm i
+```
+
+
+## Local development
+
+Run local development server & open browser in develop page (/dev)
+```
+npm run serve
+```
+
+Watch for *.ts changes
+```
+npm run build:watch
+```
+
+
+
+
 ## npm publish
 https://www.npmjs.com/package/jesidea-wc
 
@@ -8,6 +31,12 @@ Log in into the public npm registry (jescacena)
 ```
 npm adduser
 ```
+
+## Copy lib assets into jesidea-landing-page
+```
+npm run build:pro-local-jesidea-landing
+```
+
 
 
 ---

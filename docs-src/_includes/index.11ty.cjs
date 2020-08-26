@@ -26,6 +26,7 @@ module.exports = function(data) {
       <center><a href="${relative(page.url, '/api/')}">API reference</a></center>
       <ul>
         <li><a href="${relative(page.url, '/my-element/')}">my-element</a></li>
+        <li><a href="${relative(page.url, '/jwc-layout-header/')}">jwc-layout-header</a></li>
         <li><a href="${relative(page.url, '/jwc-project-card/')}">jwc-project-card</a></li>
         <li><a href="${relative(page.url, '/jwc-user-profile/')}">jwc-user-profile</a></li>
       </ul>

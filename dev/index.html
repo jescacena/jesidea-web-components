@@ -19,7 +19,14 @@
             type="module"
             src="../dist/jwc-project-card/jwc-project-card.js"
         ></script>
+        <script
+            type="module"
+            src="../dist/jwc-layout-header/jwc-layout-header.js"
+        ></script>
         <style>
+            body {
+                /* width: 80%; */
+            }
             p {
                 border: solid 1px blue;
                 padding: 8px;
@@ -27,13 +34,14 @@
         </style>
     </head>
     <body>
-        <!-- <my-element name="jander">
-      <p>This is child content</p>
-    </my-element> -->
 
+        <h2>jwc-layout-header</h2>
+        <jwc-layout-header></jwc-layout-header>
+
+        <hr>
+        
         <h2>jwc-project-card</h2>
-        <jwc-project-card
-        ></jwc-project-card>
+        <jwc-project-card></jwc-project-card>
 
         <script>
             var jwcProjectCard = document.querySelector("jwc-project-card");
