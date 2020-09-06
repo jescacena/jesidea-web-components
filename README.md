@@ -1,7 +1,7 @@
 # Jesidea Web Components
 Web components repository for Jesidea web apps
 
-[Storybook demo](https://jescacena.github.io/jesidea-web-components)
+[Storybook demo in github pages](https://jescacena.github.io/jesidea-web-components)
 
 ## Install
 
