@@ -108,25 +108,27 @@
       "attributes": [
         {
           "name": "image",
-          "type": "string | null"
+          "type": "string | null",
+          "default": "\"http://jesidea.com/home/img/supermoco-julio-2020.png\""
         },
         {
           "name": "data",
           "type": "JwcProfileData",
-          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla, Madrid, Spain\",\"company\":\"@paradigmate\",\"companyUrl\":\"https://twitter.com/paradigmate?lang=en\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
         }
       ],
       "properties": [
         {
           "name": "image",
           "attribute": "image",
-          "type": "string | null"
+          "type": "string | null",
+          "default": "\"http://jesidea.com/home/img/supermoco-julio-2020.png\""
         },
         {
           "name": "data",
           "attribute": "data",
           "type": "JwcProfileData",
-          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla\",\"company\":\"@paradigmate\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
+          "default": "{\"name\":\"Javier Escacena\",\"username\":null,\"occupation\":\"Programmer\",\"location\":\"Cercedilla, Madrid, Spain\",\"company\":\"@paradigmate\",\"companyUrl\":\"https://twitter.com/paradigmate?lang=en\",\"email\":\"javier.escacena@gmail.com\",\"website\":\"http://jesidea.com\",\"twitter\":\"@javiescacena\",\"linkedin\":\"https://www.linkedin.com/in/jescacena/\",\"github\":\"jescacena\"}"
         }
       ]
     },

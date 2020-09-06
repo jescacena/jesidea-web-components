@@ -1,10 +1,24 @@
 import { JwcUserProfile } from "./jwc-user-profile.js";
-// import {fixture, html} from '@open-wc/testing';
+import { fixture, html } from '@open-wc/testing';
 const assert = chai.assert;
 suite("jwc-user-profile", () => {
     test("is defined", () => {
         const el = document.createElement("jwc-user-profile");
         assert.instanceOf(el, JwcUserProfile);
+    });
+    test("renders name property", async () => {
+        const mydata = { name: "Jander Clander" };
+        const el = (await fixture(html `<jwc-user-profile .data=${mydata}></jwc-user-profile>`));
+        const nameElement = el.shadowRoot.querySelector("h2");
+        assert.strictEqual(nameElement === null || nameElement === void 0 ? void 0 : nameElement.innerText, mydata.name);
+    });
+    test("mobile class is added on responsive", async () => {
+        const el = (await fixture(html `<jwc-user-profile></jwc-user-profile>`));
+        el._isMobile = true;
+        await el.updateComplete;
+        const containerElement = el.shadowRoot.querySelector(".container");
+        const containsMobile = (containerElement === null || containerElement === void 0 ? void 0 : containerElement.classList.toString().indexOf("mobile")) !== -1;
+        assert.isTrue(containsMobile);
     });
     // test('renders with default values', async () => {
     //   const el = await fixture(html`<jwc-user-profile</jwc-user-profile`);

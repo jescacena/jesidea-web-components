@@ -115,7 +115,7 @@ __decorate([
 __decorate([
     property({
         attribute: "data",
-        converter: (value, type) => {
+        converter: (value) => {
             if (typeof value === "string") {
                 return JSON.parse(value);
             }

@@ -34,7 +34,7 @@ export class JwcProjectCard extends LitElement {
 
   @property({
     attribute: "data",
-    converter: (value: any, type: any) => {
+    converter: (value: any) => {
       if (typeof value === "string") {
         return JSON.parse(value);
       }

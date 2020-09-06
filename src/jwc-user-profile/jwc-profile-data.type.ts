@@ -4,6 +4,7 @@ export type JwcProfileData = {
   occupation: string;
   location: string;
   company: string;
+  companyUrl: string;
   email: string;
   website: string;
   twitter: string;
