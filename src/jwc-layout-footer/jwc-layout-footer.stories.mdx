@@ -12,24 +12,33 @@ Jesidea footer component. It contains Javier Escacena copyright and optionally s
 ## Default values
 
 <Preview withToolbar>
-    <Story name="simple" height="50px">
-        {html` <jwc-layout-footer></jwc-layout-footer> `}
-    </Story>
+  <Story name="simple" height="50px">
+    {html` <jwc-layout-footer></jwc-layout-footer> `}
+  </Story>
 </Preview>
 
 ## Passing social link items
+
 ### As JSON string attributes
+
 <Preview withToolbar>
-    <Story name="with social link items" height="50px">
-        {html` <jwc-layout-footer social-link-items='[{ "type": "github", "url": "https://github.com/jescacena" }]'></jwc-layout-footer> `}
-    </Story>
+  <Story name="with social link items" height="50px">
+    {html`
+      <jwc-layout-footer
+        social-link-items='[{ "type": "github", "url": "https://github.com/jescacena" }]'
+      ></jwc-layout-footer>
+    `}
+  </Story>
 </Preview>
 
 ### As JSON object to the socialLinkItems property
+
 ```html
 <script>
-    var jwcFooter= document.querySelector("jwc-layout-footer");
-    jwcFooter.socialLinkItems = [{ type: "github", url: "https://github.com/jescacena" }];
+  var jwcFooter = document.querySelector("jwc-layout-footer");
+  jwcFooter.socialLinkItems = [
+    { type: "github", url: "https://github.com/jescacena" },
+  ];
 </script>
 <jwc-layout-footer></jwc-layout-footer>
 ```

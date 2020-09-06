@@ -11,31 +11,35 @@ It contains Jesidea logo and navigation menu
 // [...] use markdown to format your text
 
 ## Default values
+
 <Preview withToolbar>
-    <Story name="simple" height="150px">
-        {html` <jwc-project-card></jwc-project-card> `}
-    </Story>
+  <Story name="simple" height="150px">
+    {html` <jwc-project-card></jwc-project-card> `}
+  </Story>
 </Preview>
 
 ## with logo image
+
 <Preview withToolbar>
-    <Story name="with logo" height="150px">
-        {html`
-            <jwc-project-card
-                image="https://www.bioecoactual.com/wp-content/uploads/2016/09/gandhi.jpg"
-            ></jwc-project-card>
-        `}
-    </Story>
+  <Story name="with logo" height="150px">
+    {html`
+      <jwc-project-card
+        image="https://www.bioecoactual.com/wp-content/uploads/2016/09/gandhi.jpg"
+      ></jwc-project-card>
+    `}
+  </Story>
 </Preview>
 
 ## with custom data
 
 <Preview withToolbar>
-    <Story name="with custom data" height="150px">
-        {html`
-            <jwc-project-card data='{ "name": "My project",  "description": "My description bla bla", "website": "http://google.com" }'></jwc-project-card>
-        `}
-    </Story>
+  <Story name="with custom data" height="150px">
+    {html`
+      <jwc-project-card
+        data='{ "name": "My project",  "description": "My description bla bla", "website": "http://google.com" }'
+      ></jwc-project-card>
+    `}
+  </Story>
 </Preview>
 
 ## API

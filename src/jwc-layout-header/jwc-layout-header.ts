@@ -31,14 +31,14 @@ export class JwcLayoutHeader extends LitElement {
   logo: string = fallbackImageBase64Encoded;
 
   @property({
-    attribute: 'menu-items',
+    attribute: "menu-items",
     converter: (value: any, type: any) => {
-      console.log('JES type', type);
+      console.log("JES type", type);
 
-      if (typeof (value) === 'string') {
+      if (typeof value === "string") {
         return JSON.parse(value);
       }
-    }
+    },
   })
   menuItems: Array<JwcLayoutMenuItem> = [
     { label: "Home", url: "/home" },
@@ -46,25 +46,25 @@ export class JwcLayoutHeader extends LitElement {
     { label: "Articles", url: "/home/articles" },
   ];
 
-  _handleMediaQuery (event: any) {
+  _handleMediaQuery(event: any) {
     this._isMobile = event.detail.value;
   }
 
-  _handleClick () {
+  _handleClick() {
     this._toggleMenuMobile();
   }
 
-  _toggleMenuMobile () {
+  _toggleMenuMobile() {
     this._isMenuMobileVisible = !this._isMenuMobileVisible;
   }
 
-  renderMenuItems () {
+  renderMenuItems() {
     return this.menuItems.map((item) => {
       return html`<li>${item.label} &gt;</li>`;
     });
   }
 
-  renderMenu () {
+  renderMenu() {
     return html`
       ${this._isMobile
         ? html`<a
@@ -79,7 +79,7 @@ export class JwcLayoutHeader extends LitElement {
     `;
   }
 
-  renderMenuMobile () {
+  renderMenuMobile() {
     const menuMobileClasses = {
       "menu-mobile": true,
       visible: this._isMenuMobileVisible.valueOf(),
@@ -96,7 +96,7 @@ export class JwcLayoutHeader extends LitElement {
     `;
   }
 
-  render () {
+  render() {
     console.log("JES render header 222!!!", this.menuItems);
 
     const menu = this.renderMenu();
