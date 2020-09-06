@@ -23,6 +23,10 @@
             type="module"
             src="../dist/jwc-layout-header/jwc-layout-header.js"
         ></script>
+        <script
+            type="module"
+            src="../dist/jwc-layout-footer/jwc-layout-footer.js"
+        ></script>
         <style>
             body {
                 /* width: 80%; */
@@ -34,6 +38,16 @@
         </style>
     </head>
     <body>
+
+        <h2>jwc-layout-footer</h2>
+        <jwc-layout-footer class="footer-1"></jwc-layout-footer>
+
+        <hr>
+
+        <h2>jwc-layout-footer 2</h2>
+        <jwc-layout-footer social-link-items='[{ "type": "linkedin", "url": "https://github.com/jescacena" }]' class="footer-2"></jwc-layout-footer>
+
+        <hr>
 
         <h2>jwc-layout-header</h2>
         <jwc-layout-header></jwc-layout-header>
@@ -53,6 +67,10 @@
                 repo: "http://jander.com",
                 download: "http://playstore.com",
             };
+
+            var jwcFooter= document.querySelector(".footer-1");
+            jwcFooter.socialLinkItems = [{ type: "github", url: "https://github.com/jescacena" }];
+
         </script>
     </body>
 </html>

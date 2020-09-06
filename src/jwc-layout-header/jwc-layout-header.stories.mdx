@@ -1,0 +1,42 @@
+import { Story, Preview, Meta, Props } from "@open-wc/demoing-storybook";
+import { html } from "lit-html";
+import "../../dist/index.bundled.js";
+
+<Meta title="jwc-layout-header" />
+
+# JwcLayoutHeader Web Component
+
+Jesidea header component. 
+It contains Jesidea logo and navigation menu
+// [...] use markdown to format your text
+
+## Default values
+<Preview withToolbar>
+    <Story name="simple" height="50px">
+        {html` <jwc-layout-header></jwc-layout-header> `}
+    </Story>
+</Preview>
+
+## with logo image
+<Preview withToolbar>
+    <Story name="with logo" height="50px">
+        {html` <jwc-layout-header logo="https://via.placeholder.com/150"></jwc-layout-header> `}
+    </Story>
+</Preview>
+
+## with custom menu items
+<Preview withToolbar>
+    <Story
+        name="with custom menu items"
+        height="50px"
+        parameters={{viewport: {defaultViewPort:'iphone5'}}}>
+        {html` <jwc-layout-header menu-items='[ { "label" : "mi pagina", "url":"http://kaka.com" } ]'></jwc-layout-header> `}
+    </Story>
+</Preview>
+
+## API
+
+The api table will show the data of this component your `custom-elements.json`.
+
+<Props of="jwc-layout-header" />
+

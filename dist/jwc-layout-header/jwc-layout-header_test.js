@@ -10,7 +10,7 @@ suite("jwc-layout-header", () => {
     test("menu mobile is hidden on init", async () => {
         const el = (await fixture(html `<jwc-layout-header></jwc-layout-header>`));
         const headerElement = el.shadowRoot.querySelector(".menu-mobile");
-        assert.isFalse(headerElement === null || headerElement === void 0 ? void 0 : headerElement.classList.contains('visible'));
+        assert.isFalse(headerElement === null || headerElement === void 0 ? void 0 : headerElement.classList.contains("visible"));
     });
     test("menu mobile displays on menu mobile icon click", async () => {
         const el = (await fixture(html `<jwc-layout-header></jwc-layout-header>`));
@@ -20,7 +20,7 @@ suite("jwc-layout-header", () => {
         menuMobileIcon.click();
         await el.updateComplete;
         const headerElement = el.shadowRoot.querySelector(".menu-mobile");
-        assert.isTrue(headerElement === null || headerElement === void 0 ? void 0 : headerElement.classList.contains('visible'));
+        assert.isTrue(headerElement === null || headerElement === void 0 ? void 0 : headerElement.classList.contains("visible"));
     });
 });
 //# sourceMappingURL=jwc-layout-header_test.js.map

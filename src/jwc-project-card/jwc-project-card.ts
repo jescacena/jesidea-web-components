@@ -32,7 +32,14 @@ export class JwcProjectCard extends LitElement {
   @property()
   headerClasses: ClassInfo = { header: true, "header-mobile": false };
 
-  @property()
+  @property({
+    attribute: 'data',
+    converter: (value: any, type: any) => {
+      if(typeof(value) === 'string') {
+        return JSON.parse(value);
+      }
+    }
+  })
   data: JwcProjectData = {
     name: "-Empty name-",
     description: "-Empty description-",

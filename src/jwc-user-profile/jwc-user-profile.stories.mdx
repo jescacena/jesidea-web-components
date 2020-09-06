@@ -1,0 +1,45 @@
+import { Story, Preview, Meta, Props } from "@open-wc/demoing-storybook";
+import { html } from "lit-html";
+import "../../dist/index.bundled.js";
+
+<Meta title="jwc-user-profile" />
+
+# JwcUserProfile Web Component
+
+Jesidea user profile card component
+It contains Jesidea logo and navigation menu
+// [...] use markdown to format your text
+
+## Default values
+<Preview withToolbar>
+    <Story name="simple" height="150px">
+        {html` <jwc-user-profile></jwc-user-profile> `}
+    </Story>
+</Preview>
+
+<!-- ## with logo image
+<Preview withToolbar>
+    <Story name="with logo" height="150px">
+        {html`
+            <jwc-user-profile
+                image="https://www.bioecoactual.com/wp-content/uploads/2016/09/gandhi.jpg"
+            ></jwc-user-profile>
+        `}
+    </Story>
+</Preview>
+
+## with custom data
+
+<Preview withToolbar>
+    <Story name="with custom data" height="150px">
+        {html`
+            <jwc-user-profile data='{ "name": "My project",  "description": "My description bla bla", "website": "http://google.com" }'></jwc-user-profile>
+        `}
+    </Story>
+</Preview> -->
+
+## API
+
+The api table will show the data of this component your `custom-elements.json`.
+
+<Props of="jwc-user-profile" />

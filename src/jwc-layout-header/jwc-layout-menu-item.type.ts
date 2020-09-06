@@ -1,5 +1,4 @@
-
 export type JwcLayoutMenuItem = {
-    label: string;
-    url: string;
+  label: string;
+  url: string;
 };

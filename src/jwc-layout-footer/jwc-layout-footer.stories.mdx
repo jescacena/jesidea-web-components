@@ -1,0 +1,41 @@
+import { Story, Preview, Meta, Props } from "@open-wc/demoing-storybook";
+import { html } from "lit-html";
+import "../../dist/index.bundled.js";
+
+<Meta title="jwc-layout-footer" />
+
+# JwcLayoutFooter Web Component
+
+Jesidea footer component. It contains Javier Escacena copyright and optionally social links
+// [...] use markdown to format your text
+
+## Default values
+
+<Preview withToolbar>
+    <Story name="simple" height="50px">
+        {html` <jwc-layout-footer></jwc-layout-footer> `}
+    </Story>
+</Preview>
+
+## Passing social link items
+### As JSON string attributes
+<Preview withToolbar>
+    <Story name="with social link items" height="50px">
+        {html` <jwc-layout-footer social-link-items='[{ "type": "github", "url": "https://github.com/jescacena" }]'></jwc-layout-footer> `}
+    </Story>
+</Preview>
+
+### As JSON object to the socialLinkItems property
+```html
+<script>
+    var jwcFooter= document.querySelector("jwc-layout-footer");
+    jwcFooter.socialLinkItems = [{ type: "github", url: "https://github.com/jescacena" }];
+</script>
+<jwc-layout-footer></jwc-layout-footer>
+```
+
+## API
+
+The api table will show the data of "jwc-layout-footer" in your `custom-elements.json`.
+
+<Props of="jwc-layout-footer" />

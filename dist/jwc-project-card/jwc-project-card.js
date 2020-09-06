@@ -113,7 +113,14 @@ __decorate([
     property()
 ], JwcProjectCard.prototype, "headerClasses", void 0);
 __decorate([
-    property()
+    property({
+        attribute: 'data',
+        converter: (value, type) => {
+            if (typeof (value) === 'string') {
+                return JSON.parse(value);
+            }
+        }
+    })
 ], JwcProjectCard.prototype, "data", void 0);
 JwcProjectCard = __decorate([
     customElement("jwc-project-card")

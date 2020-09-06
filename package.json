@@ -4,11 +4,10 @@
   "description": "Jesidea Web Components",
   "main": "dist/index.bundled.js",
   "module": "dist/index.bundled.js",
-  "type": "module",
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc",
-    "prebuild:pro": "cp -R ./src/assets ./dist",
+    "prebuild:pro": "npm run build ; cp -R ./src/assets ./dist",
     "build:pro": "rollup -c",
     "build:pro-local-jesidea-landing": "npm run clean; npm run build; npm run build:pro ; cp ./dist/index.bundled.js ../jesidea-landing-page/js/jesidea-wc",
     "prebuild:watch": "cp -R ./src/assets ./dist",
@@ -31,7 +30,9 @@
     "test:watch": "karma start karma.conf.cjs --auto-watch=true --single-run=false",
     "test:update-snapshots": "karma start karma.conf.cjs --update-snapshots",
     "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots",
-    "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js"
+    "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
+    "storybook": "start-storybook --node-resolve --watch --open",
+    "storybook:build": "build-storybook"
   },
   "keywords": [
     "web-components",
@@ -51,9 +52,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@open-wc/demoing-storybook": "^2.3.20",
     "@open-wc/testing": "^2.5.10",
     "@open-wc/testing-karma": "^3.3.11",
     "@rollup/plugin-replace": "^2.3.1",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/addon-storysource": "^6.0.21",
+    "@storybook/web-components": "^6.0.21",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",

@@ -3,7 +3,7 @@ Web components repository for Jesidea web apps
 
 ## Install
 
-Node v12.X
+Node v12.16.0+
 ```
 npm i
 ```
@@ -20,6 +20,12 @@ Watch for *.ts changes
 ```
 npm run build:watch
 ```
+
+## Demoying with storybook
+```
+npm run storybook
+```
+**NOTE**: Stories get components from "dist/index.bundled.js" bundle. So make sure to have this bundle updated
 
 
 
