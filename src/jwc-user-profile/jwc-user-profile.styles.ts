@@ -28,16 +28,15 @@ export const styles = css`
   }
 
   .profile li {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .social-links {
     margin: 0 auto;
     padding: 0;
-
   }
   .social-links li {
-    float:left;
+    float: left;
   }
   .social-links img {
     height: 2rem;
@@ -60,11 +59,10 @@ export const styles = css`
     text-align: center;
   }
 
-  .container.mobile img.photo{
+  .container.mobile img.photo {
     width: 70%;
     margin: 1rem auto 0 auto;
   }
-
 `;
 
 export const githubIconBase64Encoded =

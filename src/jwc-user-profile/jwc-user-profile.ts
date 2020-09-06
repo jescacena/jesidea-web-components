@@ -7,8 +7,12 @@ import { LitElement, html, customElement, property } from "lit-element";
 import { JwcProfileData } from "./jwc-profile-data.type";
 import "lit-media-query/lit-media-query.js";
 
-
-import { styles, githubIconBase64Encoded, linkedIconBase64Encoded, twitterIconBase64Encoded } from "./jwc-user-profile.styles";
+import {
+  styles,
+  githubIconBase64Encoded,
+  linkedIconBase64Encoded,
+  twitterIconBase64Encoded,
+} from "./jwc-user-profile.styles";
 
 /**
  * User profile element
@@ -16,7 +20,6 @@ import { styles, githubIconBase64Encoded, linkedIconBase64Encoded, twitterIconBa
 
 @customElement("jwc-user-profile")
 export class JwcUserProfile extends LitElement {
-
   static styles = [styles];
 
   @property()
@@ -32,17 +35,16 @@ export class JwcUserProfile extends LitElement {
     this._isMobile = event.detail.value;
   }
 
-
   @property()
-  image: string | null = 'http://jesidea.com/home/img/supermoco-julio-2020.png';
+  image: string | null = "http://jesidea.com/home/img/supermoco-julio-2020.png";
 
   @property({
-    attribute: 'data',
+    attribute: "data",
     converter: (value: any) => {
-      if (typeof (value) === 'string') {
+      if (typeof value === "string") {
         return JSON.parse(value);
       }
-    }
+    },
   })
   data: JwcProfileData = {
     name: "Javier Escacena",
@@ -58,37 +60,66 @@ export class JwcUserProfile extends LitElement {
     github: "jescacena",
   };
 
-  render () {
+  render() {
+    console.log("JES user profile render!!", this.data);
 
-    console.log('JES user profile render!!', this.data);
-    
     return html`
-    
-    <lit-media-query
-      .query="${this._query}"
-      @changed="${this._handleMediaQuery}"
-    >
-    </lit-media-query>
+      <lit-media-query
+        .query="${this._query}"
+        @changed="${this._handleMediaQuery}"
+      >
+      </lit-media-query>
 
-
-    <div class="container ${this._isMobile ? 'mobile' : ''}">
-    <img class="photo" src=${this.image}>
-    <div class="profile">
-      <h2>${this.data.name}</h2>
-      <ul>
-        <li class="occupation"><strong>${this.data.occupation}</strong></li>
-        <li class="company">Company: <a target="_blank" href=${this.data.companyUrl}><strong>${this.data.company}</strong></a></li>
-        <li class="location">Location: <a target="_blank" href="https://google.es/maps/place/${this.data.location}"><strong>${this.data.location}</strong></a></li>
-        <li class="email">Email: <a href="mailto:${this.data.email}">${this.data.email}</a></li>
-        <li class="website">Website: <a target="_blank" href=${this.data.website}>${this.data.website}</a></li>
-      </ul>
-      <ul class="social-links">
-            <li class="github"><a target="_blank" href="https://github.com/${this.data.github}"><img src=${githubIconBase64Encoded}></a></li>
-            <li class="linkedin"><a target="_blank" href="${this.data.linkedin}"><img src=${linkedIconBase64Encoded}></a></li>
-            <li class="twitter"><a target="_blank" href="https://twitter.com/${this.data.twitter}"><img src=${twitterIconBase64Encoded}></a></li>
-      </ul>
-    </div>
-    </div> `;
+      <div class="container ${this._isMobile ? "mobile" : ""}">
+        <img class="photo" src=${this.image} />
+        <div class="profile">
+          <h2>${this.data.name}</h2>
+          <ul>
+            <li class="occupation"><strong>${this.data.occupation}</strong></li>
+            <li class="company">
+              Company:
+              <a target="_blank" href=${this.data.companyUrl}
+                ><strong>${this.data.company}</strong></a
+              >
+            </li>
+            <li class="location">
+              Location:
+              <a
+                target="_blank"
+                href="https://google.es/maps/place/${this.data.location}"
+                ><strong>${this.data.location}</strong></a
+              >
+            </li>
+            <li class="email">
+              Email: <a href="mailto:${this.data.email}">${this.data.email}</a>
+            </li>
+            <li class="website">
+              Website:
+              <a target="_blank" href=${this.data.website}
+                >${this.data.website}</a
+              >
+            </li>
+          </ul>
+          <ul class="social-links">
+            <li class="github">
+              <a target="_blank" href="https://github.com/${this.data.github}"
+                ><img src=${githubIconBase64Encoded}
+              /></a>
+            </li>
+            <li class="linkedin">
+              <a target="_blank" href="${this.data.linkedin}"
+                ><img src=${linkedIconBase64Encoded}
+              /></a>
+            </li>
+            <li class="twitter">
+              <a target="_blank" href="https://twitter.com/${this.data.twitter}"
+                ><img src=${twitterIconBase64Encoded}
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;
   }
 }
 

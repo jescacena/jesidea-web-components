@@ -1,5 +1,5 @@
 import { JwcUserProfile } from "./jwc-user-profile.js";
-import { fixture, html } from '@open-wc/testing';
+import { fixture, html } from "@open-wc/testing";
 
 const assert = chai.assert;
 
@@ -10,7 +10,7 @@ suite("jwc-user-profile", () => {
   });
 
   test("renders name property", async () => {
-    const mydata = {name:"Jander Clander"};
+    const mydata = { name: "Jander Clander" };
     const el = (await fixture(
       html`<jwc-user-profile .data=${mydata}></jwc-user-profile>`
     )) as JwcUserProfile;
@@ -25,10 +25,10 @@ suite("jwc-user-profile", () => {
     el._isMobile = true;
     await el.updateComplete;
     const containerElement = el.shadowRoot!.querySelector(".container");
-    const containsMobile = containerElement?.classList.toString().indexOf("mobile") !== -1;
+    const containsMobile =
+      containerElement?.classList.toString().indexOf("mobile") !== -1;
 
     assert.isTrue(containsMobile);
-
   });
 
   // test('renders with default values', async () => {

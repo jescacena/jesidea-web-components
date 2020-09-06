@@ -36,7 +36,7 @@ let JwcLayoutHeader = class JwcLayoutHeader extends LitElement {
     }
     renderMenuItems() {
         return this.menuItems.map((item) => {
-            return html `<li>${item.label} &gt;</li>`;
+            return html `<li><a href=${item.url}>${item.label}</a></li>`;
         });
     }
     renderMenu() {

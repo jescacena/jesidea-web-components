@@ -1,5 +1,5 @@
 import { JwcUserProfile } from "./jwc-user-profile.js";
-import { fixture, html } from '@open-wc/testing';
+import { fixture, html } from "@open-wc/testing";
 const assert = chai.assert;
 suite("jwc-user-profile", () => {
     test("is defined", () => {

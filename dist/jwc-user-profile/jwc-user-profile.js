@@ -10,7 +10,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html, customElement, property } from "lit-element";
 import "lit-media-query/lit-media-query.js";
-import { styles, githubIconBase64Encoded, linkedIconBase64Encoded, twitterIconBase64Encoded } from "./jwc-user-profile.styles";
+import { styles, githubIconBase64Encoded, linkedIconBase64Encoded, twitterIconBase64Encoded, } from "./jwc-user-profile.styles";
 /**
  * User profile element
  */
@@ -20,7 +20,7 @@ let JwcUserProfile = class JwcUserProfile extends LitElement {
         this._query = "(max-width: 800px)";
         this._isMobile = window.visualViewport.width < 800;
         this._isMenuMobileVisible = false;
-        this.image = 'http://jesidea.com/home/img/supermoco-julio-2020.png';
+        this.image = "http://jesidea.com/home/img/supermoco-julio-2020.png";
         this.data = {
             name: "Javier Escacena",
             username: null,
@@ -39,34 +39,64 @@ let JwcUserProfile = class JwcUserProfile extends LitElement {
         this._isMobile = event.detail.value;
     }
     render() {
-        console.log('JES user profile render!!', this.data);
+        console.log("JES user profile render!!", this.data);
         return html `
-    
-    <lit-media-query
-      .query="${this._query}"
-      @changed="${this._handleMediaQuery}"
-    >
-    </lit-media-query>
+      <lit-media-query
+        .query="${this._query}"
+        @changed="${this._handleMediaQuery}"
+      >
+      </lit-media-query>
 
-
-    <div class="container ${this._isMobile ? 'mobile' : ''}">
-    <img class="photo" src=${this.image}>
-    <div class="profile">
-      <h2>${this.data.name}</h2>
-      <ul>
-        <li class="occupation"><strong>${this.data.occupation}</strong></li>
-        <li class="company">Company: <a target="_blank" href=${this.data.companyUrl}><strong>${this.data.company}</strong></a></li>
-        <li class="location">Location: <a target="_blank" href="https://google.es/maps/place/${this.data.location}"><strong>${this.data.location}</strong></a></li>
-        <li class="email">Email: <a href="mailto:${this.data.email}">${this.data.email}</a></li>
-        <li class="website">Website: <a target="_blank" href=${this.data.website}>${this.data.website}</a></li>
-      </ul>
-      <ul class="social-links">
-            <li class="github"><a target="_blank" href="https://github.com/${this.data.github}"><img src=${githubIconBase64Encoded}></a></li>
-            <li class="linkedin"><a target="_blank" href="${this.data.linkedin}"><img src=${linkedIconBase64Encoded}></a></li>
-            <li class="twitter"><a target="_blank" href="https://twitter.com/${this.data.twitter}"><img src=${twitterIconBase64Encoded}></a></li>
-      </ul>
-    </div>
-    </div> `;
+      <div class="container ${this._isMobile ? "mobile" : ""}">
+        <img class="photo" src=${this.image} />
+        <div class="profile">
+          <h2>${this.data.name}</h2>
+          <ul>
+            <li class="occupation"><strong>${this.data.occupation}</strong></li>
+            <li class="company">
+              Company:
+              <a target="_blank" href=${this.data.companyUrl}
+                ><strong>${this.data.company}</strong></a
+              >
+            </li>
+            <li class="location">
+              Location:
+              <a
+                target="_blank"
+                href="https://google.es/maps/place/${this.data.location}"
+                ><strong>${this.data.location}</strong></a
+              >
+            </li>
+            <li class="email">
+              Email: <a href="mailto:${this.data.email}">${this.data.email}</a>
+            </li>
+            <li class="website">
+              Website:
+              <a target="_blank" href=${this.data.website}
+                >${this.data.website}</a
+              >
+            </li>
+          </ul>
+          <ul class="social-links">
+            <li class="github">
+              <a target="_blank" href="https://github.com/${this.data.github}"
+                ><img src=${githubIconBase64Encoded}
+              /></a>
+            </li>
+            <li class="linkedin">
+              <a target="_blank" href="${this.data.linkedin}"
+                ><img src=${linkedIconBase64Encoded}
+              /></a>
+            </li>
+            <li class="twitter">
+              <a target="_blank" href="https://twitter.com/${this.data.twitter}"
+                ><img src=${twitterIconBase64Encoded}
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;
     }
 };
 JwcUserProfile.styles = [styles];
@@ -84,12 +114,12 @@ __decorate([
 ], JwcUserProfile.prototype, "image", void 0);
 __decorate([
     property({
-        attribute: 'data',
+        attribute: "data",
         converter: (value) => {
-            if (typeof (value) === 'string') {
+            if (typeof value === "string") {
                 return JSON.parse(value);
             }
-        }
+        },
     })
 ], JwcUserProfile.prototype, "data", void 0);
 JwcUserProfile = __decorate([
