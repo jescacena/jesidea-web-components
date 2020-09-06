@@ -9,7 +9,7 @@
     "build": "tsc",
     "prebuild:pro": "npm run build ; cp -R ./src/assets ./dist",
     "build:pro": "rollup -c",
-    "build:pro-local-jesidea-landing": "npm run clean; npm run build; npm run build:pro ; cp ./dist/index.bundled.js ../jesidea-landing-page/js/jesidea-wc",
+    "build:pro-local-jesidea-landing": "npm run build:pro ; cp ./dist/index.bundled.js ../jesidea-landing-page/js/jesidea-wc",
     "prebuild:watch": "cp -R ./src/assets ./dist",
     "build:watch": "tsc --watch",
     "clean": "rimraf lib ./dist/index.bundled.js",
