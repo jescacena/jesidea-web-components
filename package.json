@@ -32,7 +32,7 @@
     "test:prune-snapshots": "karma start karma.conf.cjs --prune-snapshots",
     "checksize": "rollup -c ; cat index.bundled.js | gzip -9 | wc -c ; rm index.bundled.js",
     "storybook": "start-storybook --node-resolve --watch --open",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook -o ./docs"
   },
   "keywords": [
     "web-components",

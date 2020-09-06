@@ -101,13 +101,13 @@ __decorate([
 ], JwcLayoutHeader.prototype, "logo", void 0);
 __decorate([
     property({
-        attribute: 'menu-items',
+        attribute: "menu-items",
         converter: (value, type) => {
-            console.log('JES type', type);
-            if (typeof (value) === 'string') {
+            console.log("JES type", type);
+            if (typeof value === "string") {
                 return JSON.parse(value);
             }
-        }
+        },
     })
 ], JwcLayoutHeader.prototype, "menuItems", void 0);
 JwcLayoutHeader = __decorate([

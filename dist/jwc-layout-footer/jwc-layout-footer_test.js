@@ -9,14 +9,16 @@ suite("jwc-layout-footer", () => {
     test("renders copyright section", async () => {
         const el = (await fixture(html `<jwc-layout-footer></jwc-layout-footer>`));
         const copyrightElement = el.shadowRoot.querySelector(".copyright");
-        console.log('JES copyrightElement -->', copyrightElement);
+        console.log("JES copyrightElement -->", copyrightElement);
         assert.isNotEmpty(copyrightElement === null || copyrightElement === void 0 ? void 0 : copyrightElement.innerHTML);
     });
     test("renders social links", async () => {
         const socialLinkItems = [
-            { type: "github", url: "https://github.com/jescacena" }
+            { type: "github", url: "https://github.com/jescacena" },
         ];
-        const el = await fixture(html `<jwc-layout-footer .socialLinkItems=${socialLinkItems}></jwc-layout-footer>`);
+        const el = await fixture(html `<jwc-layout-footer
+        .socialLinkItems=${socialLinkItems}
+      ></jwc-layout-footer>`);
         const results = el.shadowRoot.querySelectorAll(".social-link-item");
         assert.strictEqual(results === null || results === void 0 ? void 0 : results.length, 1);
     });
