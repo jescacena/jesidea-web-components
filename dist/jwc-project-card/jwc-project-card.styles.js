@@ -92,7 +92,6 @@ export const styles = css `
     flex-direction: column;
     justify-content: space-between;
     border: solid 1px gray;
-    max-width: 90%;
   }
 
   }`;

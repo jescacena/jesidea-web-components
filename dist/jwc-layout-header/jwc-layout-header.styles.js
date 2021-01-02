@@ -13,6 +13,7 @@ export const styles = css `
     img {
         width: 130px;
         height: 25px;
+        margin: 0.5rem 1rem 0.5rem 1rem;
     }
 
 
@@ -44,6 +45,15 @@ export const styles = css `
         z-index:1111;
         background-color: var(--theme-bg-color-third);
         padding: 1rem;
+    }
+
+    .menu-mobile-icon {
+        background-color:yellow;
+        border-radius: 50%;
+    }
+
+    .menu-mobile-icon img {
+        margin: 0.5rem;
     }
 
     .menu-mobile.visible {

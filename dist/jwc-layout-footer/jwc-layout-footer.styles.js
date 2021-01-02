@@ -9,6 +9,7 @@ export const styles = css `
     color: var(--theme-font-color, #000);
     background-color: var(--theme-bg-color-secondary);
     text-align: center;
+    padding: 1rem;
   }
 
   ul.social-links {

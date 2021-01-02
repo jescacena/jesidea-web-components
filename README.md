@@ -40,6 +40,26 @@ Log in into the public npm registry (jescacena)
 npm adduser
 ```
 
+*NOTA*: No olvidar indexar desde el /src/index.js si hay un componente nuevo
+
+1. Edit package.json to bump up “version”
+2. npm run storybook:build
+3. npm run build:pro
+4. git add . ; git commit -m ‘XXXX’
+5. git tag -a v0.0.X -m "version 0.0.X"
+6. git push origin master —tags
+7. npm publish
+
+## Test jesidea-landing-page in local
+```
+npm run build:pro-local-jesidea-landing
+```
+## Taggeo de commit antes de los publish
+
+```
+git tag -a v0.0.3 -m "version 0.0.3"
+```
+
 ## Copy lib assets into jesidea-landing-page
 ```
 npm run build:pro-local-jesidea-landing

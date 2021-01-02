@@ -1,6 +1,6 @@
 {
   "name": "jesidea-wc",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Jesidea Web Components",
   "main": "dist/index.bundled.js",
   "module": "dist/index.bundled.js",
@@ -26,6 +26,7 @@
     "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
     "serve": "es-dev-server --open /dev --node-resolve --watch",
+    "start": "concurrently \"npm run serve\" \"npm run build:watch\"",
     "test": "karma start karma.conf.cjs",
     "test:watch": "karma start karma.conf.cjs --auto-watch=true --single-run=false",
     "test:update-snapshots": "karma start karma.conf.cjs --update-snapshots",
@@ -66,6 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "chai": "^4.2.0",
+    "concurrently": "^5.3.0",
     "deepmerge": "^4.2.2",
     "es-dev-server": "^1.46.1",
     "eslint": "^6.8.0",
@@ -80,7 +82,7 @@
     "rollup": "^1.32.1",
     "rollup-plugin-filesize": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-terser": "^5.3.1",
     "typescript": "^3.8.3",
     "web-component-analyzer": "^1.0.3"
   },
